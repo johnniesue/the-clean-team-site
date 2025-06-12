@@ -11,60 +11,87 @@
     <h1>The Clean Team Cleaning Checklist</h1>
   </header>
   <main>
-    <form id="checklistForm">
+    <form action="https://formspree.io/f/mjkyaary" method="POST" id="checklistForm">
+      <section>
+        <h2>Your Info</h2>
+        <label>Your Email:
+          <input type="email" name="email" placeholder="customer@email.com" required>
+        </label><br/>
+        <label><input type="checkbox" name="send_copy" value="yes" checked>
+          Send me a copy of the submitted checklist
+        </label>
+      </section>
+
       <section>
         <h2>Kitchen</h2>
-        <label><input type="checkbox"> Clean all hard surfaces with disinfectant</label><br/>
-        <label><input type="checkbox"> Clean inside microwave</label><br/>
-        <label><input type="checkbox"> Clean crumbs out of toaster</label><br/>
-        <label><input type="checkbox"> Clean coffee maker</label><br/>
-        <label><input type="checkbox"> Move all items and clean underneath</label><br/>
-        <label><input type="checkbox"> Polish stainless steel</label><br/>
-        <label><input type="checkbox"> Scrub and polish sink</label><br/>
-        <label><input type="checkbox"> (Rotation) Wipe cabinet fronts</label><br/>
-        <label><input type="checkbox"> Remove cobwebs under cabinets, dust baseboards</label><br/>
-        <label><input type="checkbox"> Check everything is shiny</label><br/>
-        <label><input type="checkbox"> Dust blinds</label><br/>
-        <textarea placeholder="Kitchen Notes..."></textarea>
+        <label><input type="checkbox" name="kitchen_clean_surfaces"> Clean all hard surfaces with disinfectant</label><br/>
+        <label><input type="checkbox" name="kitchen_microwave"> Clean inside microwave</label><br/>
+        <label><input type="checkbox" name="kitchen_toaster"> Clean crumbs out of toaster</label><br/>
+        <label><input type="checkbox" name="kitchen_coffee"> Clean coffee maker</label><br/>
+        <label><input type="checkbox" name="kitchen_under_items"> Move all items and clean underneath</label><br/>
+        <label><input type="checkbox" name="kitchen_steel"> Polish stainless steel</label><br/>
+        <label><input type="checkbox" name="kitchen_sink"> Scrub and polish sink</label><br/>
+        <label><input type="checkbox" name="kitchen_cabinets"> (Rotation) Wipe cabinet fronts</label><br/>
+        <label><input type="checkbox" name="kitchen_cobwebs"> Remove cobwebs under cabinets, dust baseboards</label><br/>
+        <label><input type="checkbox" name="kitchen_shiny"> Check everything is shiny</label><br/>
+        <label><input type="checkbox" name="kitchen_blinds"> Dust blinds</label><br/>
+        <textarea name="kitchen_notes" placeholder="Kitchen Notes..."></textarea>
       </section>
+
       <section>
         <h2>Bathroom</h2>
-        <label><input type="checkbox"> Spray shower & bath with cleaner</label><br/>
-        <label><input type="checkbox"> Clean toilet bowl and let sit</label><br/>
-        <label><input type="checkbox"> Wipe toilet top and base, dry with towel</label><br/>
-        <label><input type="checkbox"> Scrub shower, rinse and dry</label><br/>
-        <label><input type="checkbox"> Use Windex if needed</label><br/>
-        <label><input type="checkbox"> Disinfect sinks and counters</label><br/>
-        <label><input type="checkbox"> Clean mirror</label><br/>
-        <label><input type="checkbox"> (Rotation) Dust baseboards</label><br/>
-        <label><input type="checkbox"> Replace all items as found</label><br/>
-        <label><input type="checkbox"> Vacuum and mop</label><br/>
-        <textarea placeholder="Bathroom Notes..."></textarea>
+        <label><input type="checkbox" name="bath_clean_shower"> Spray shower & bath with cleaner</label><br/>
+        <label><input type="checkbox" name="bath_toilet"> Clean toilet bowl and let sit</label><br/>
+        <label><input type="checkbox" name="bath_toilet_wipe"> Wipe toilet top and base, dry with towel</label><br/>
+        <label><input type="checkbox" name="bath_scrub_rinse"> Scrub shower, rinse and dry</label><br/>
+        <label><input type="checkbox" name="bath_windex"> Use Windex if needed</label><br/>
+        <label><input type="checkbox" name="bath_disinfect"> Disinfect sinks and counters</label><br/>
+        <label><input type="checkbox" name="bath_mirror"> Clean mirror</label><br/>
+        <label><input type="checkbox" name="bath_baseboards"> (Rotation) Dust baseboards</label><br/>
+        <label><input type="checkbox" name="bath_replace_items"> Replace all items as found</label><br/>
+        <label><input type="checkbox" name="bath_vac_mop"> Vacuum and mop</label><br/>
+        <textarea name="bathroom_notes" placeholder="Bathroom Notes..."></textarea>
       </section>
+
       <section>
         <h2>Living Area</h2>
-        <label><input type="checkbox"> Dust all surfaces, including under furniture</label><br/>
-        <label><input type="checkbox"> Straighten pillows, blankets, books, and remotes</label><br/>
-        <label><input type="checkbox"> Vacuum and mop</label><br/>
-        <textarea placeholder="Living Area Notes..."></textarea>
+        <label><input type="checkbox" name="living_dust"> Dust all surfaces, including under furniture</label><br/>
+        <label><input type="checkbox" name="living_straighten"> Straighten pillows, blankets, books, and remotes</label><br/>
+        <label><input type="checkbox" name="living_vac_mop"> Vacuum and mop</label><br/>
+        <textarea name="living_notes" placeholder="Living Area Notes..."></textarea>
       </section>
+
       <section>
         <h2>Bedroom</h2>
-        <label><input type="checkbox"> Dust surfaces</label><br/>
-        <label><input type="checkbox"> Make bed (if needed)</label><br/>
-        <label><input type="checkbox"> Straighten up room</label><br/>
-        <label><input type="checkbox"> Dust fan and blinds</label><br/>
-        <label><input type="checkbox"> Vacuum</label><br/>
-        <label><input type="checkbox"> Dust baseboards with duster</label><br/>
-        <textarea placeholder="Bedroom Notes..."></textarea>
+        <label><input type="checkbox" name="bed_dust"> Dust surfaces</label><br/>
+        <label><input type="checkbox" name="bed_make_bed"> Make bed (if needed)</label><br/>
+        <label><input type="checkbox" name="bed_straighten"> Straighten up room</label><br/>
+        <label><input type="checkbox" name="bed_fan_blinds"> Dust fan and blinds</label><br/>
+        <label><input type="checkbox" name="bed_vac"> Vacuum</label><br/>
+        <label><input type="checkbox" name="bed_baseboards"> Dust baseboards with duster</label><br/>
+        <textarea name="bedroom_notes" placeholder="Bedroom Notes..."></textarea>
       </section>
+
+      <section>
+        <h2>Customer Rating</h2>
+        <p>Please rate our service:</p>
+        <label><input type="radio" name="rating" value="1"> ⭐</label>
+        <label><input type="radio" name="rating" value="2"> ⭐⭐</label>
+        <label><input type="radio" name="rating" value="3"> ⭐⭐⭐</label>
+        <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label>
+        <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐</label><br/>
+        <textarea name="rating_comments" placeholder="Optional feedback..."></textarea>
+      </section>
+
       <section>
         <h2>Sign-Off</h2>
-        <label>Employee Name: <input type="text" /></label><br/>
-        <label>Customer Name: <input type="text" /></label><br/>
-        <label>Notes: <textarea></textarea></label><br/>
+        <label>Employee Name: <input type="text" name="employee_name" /></label><br/>
+        <label>Customer Name: <input type="text" name="customer_name" /></label><br/>
+        <label>Additional Notes: <textarea name="final_notes"></textarea></label><br/>
       </section>
-      <button type="button" onclick="window.print()">Print Checklist</button>
+
+      <button type="submit">Submit Checklist</button>
+      <button type="button" onclick="window.print()">Print</button>
     </form>
   </main>
 </body>
